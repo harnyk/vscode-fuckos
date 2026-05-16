@@ -36,8 +36,25 @@ Or: open VS Code → `Developer: Install Extension from Location...` → point t
 | `Ctrl+D` | Select next occurrence |
 | `Ctrl+Shift+L` | Select all occurrences |
 | `Ctrl+Alt+Up` / `Ctrl+Alt+Down` | Add cursor above / below |
+| `Ctrl+Shift+Alt+Up` / `Ctrl+Shift+Alt+Down` | Column select up / down |
+| `Ctrl+Shift+Alt+Left` / `Ctrl+Shift+Alt+Right` | Column select left / right |
+| `Ctrl+Shift+E` | Focus Explorer panel |
+| `Ctrl+Shift+G` | Focus Source Control panel |
+| `Ctrl+Shift+X` | Focus Extensions panel |
+| `Ctrl+Shift+D` | Focus Debug panel |
+| `Ctrl+Shift+N` | New window |
+| `Ctrl+Shift+T` | Reopen closed tab |
 
 All bindings are Mac-only (`mac:` field only in `package.json`).
+
+## Extra fix: ctrl+d conflict
+
+VS Code internally binds `ctrl+d` to `deleteRight` on Mac. Add this to your user `keybindings.json`
+(`cmd+shift+p` → "Open Keyboard Shortcuts (JSON)") to remove that conflict:
+
+```json
+{ "key": "ctrl+d", "command": "-deleteRight", "when": "editorTextFocus" }
+```
 
 ## System-wide changes required
 
@@ -53,8 +70,8 @@ Uncheck:
 - "Move left a space" (`^←`)
 - "Move right a space" (`^→`)
 
-Similarly, if you add `Ctrl+Alt+Up/Down` multi-cursor and they don't work, disable:
-- "Move up a space" (`^↑`)  — may also conflict
+Similarly, if `Ctrl+Alt+Up/Down` multi-cursor or `Ctrl+Shift+Alt+Up/Down` column select don't work, also uncheck:
+- "Move up a space" (`^↑`)
 - "Move down a space" (`^↓`)
 
 ### 2. Disable macOS Emacs-style ctrl+letter bindings
@@ -71,6 +88,7 @@ This file is already created at that path. Contents:
     "^b" = "noop:";   /* moveBackward */
     "^c" = "noop:";
     "^d" = "noop:";   /* deleteForward */
+    "^e" = "noop:";   /* moveToEndOfLine */
     "^f" = "noop:";   /* moveForward */
     "^h" = "noop:";   /* deleteBackward */
     "^n" = "noop:";   /* moveDown */
