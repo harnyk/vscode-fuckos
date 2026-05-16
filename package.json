@@ -1,0 +1,67 @@
+{
+  "name": "fuckos",
+  "displayName": "FuckOS Keybindings",
+  "description": "PC-style Home/End navigation keys for Mac",
+  "version": "0.0.1",
+  "publisher": "markharnyk",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Keymaps"],
+  "contributes": {
+    "keybindings": [
+      { "mac": "home",            "command": "cursorHome",         "when": "editorTextFocus" },
+      { "mac": "end",             "command": "cursorEnd",          "when": "editorTextFocus" },
+      { "mac": "shift+home",      "command": "cursorHomeSelect",   "when": "editorTextFocus" },
+      { "mac": "shift+end",       "command": "cursorEndSelect",    "when": "editorTextFocus" },
+      { "mac": "ctrl+home",       "command": "cursorTop",          "when": "editorTextFocus" },
+      { "mac": "ctrl+end",        "command": "cursorBottom",       "when": "editorTextFocus" },
+      { "mac": "shift+ctrl+home", "command": "cursorTopSelect",    "when": "editorTextFocus" },
+      { "mac": "shift+ctrl+end",  "command": "cursorBottomSelect", "when": "editorTextFocus" },
+      { "mac": "ctrl+p",          "command": "workbench.action.quickOpen" },
+      { "mac": "ctrl+shift+p",    "command": "workbench.action.showCommands" },
+      { "mac": "ctrl+left",        "command": "cursorWordLeft",                        "when": "editorTextFocus" },
+      { "mac": "ctrl+right",       "command": "cursorWordRight",                       "when": "editorTextFocus" },
+      { "mac": "ctrl+shift+left",  "command": "cursorWordLeftSelect",                  "when": "editorTextFocus" },
+      { "mac": "ctrl+shift+right", "command": "cursorWordRightSelect",                 "when": "editorTextFocus" },
+
+      { "mac": "ctrl+backspace",   "command": "deleteWordLeft",                        "when": "editorTextFocus" },
+      { "mac": "ctrl+delete",      "command": "deleteWordRight",                       "when": "editorTextFocus" },
+
+      { "mac": "ctrl+f",           "command": "actions.find",                          "when": "editorFocus" },
+      { "mac": "ctrl+h",           "command": "editor.action.startFindReplaceAction",  "when": "editorFocus" },
+      { "mac": "ctrl+shift+f",     "command": "workbench.action.findInFiles" },
+      { "mac": "ctrl+shift+h",     "command": "workbench.action.replaceInFiles" },
+
+      { "mac": "ctrl+c",           "command": "editor.action.clipboardCopyAction",     "when": "editorTextFocus" },
+      { "mac": "ctrl+x",           "command": "editor.action.clipboardCutAction",      "when": "editorTextFocus" },
+      { "mac": "ctrl+v",           "command": "editor.action.clipboardPasteAction",    "when": "editorTextFocus" },
+      { "mac": "ctrl+z",           "command": "undo",                                  "when": "editorTextFocus" },
+      { "mac": "ctrl+y",           "command": "redo",                                  "when": "editorTextFocus" },
+      { "mac": "ctrl+a",           "command": "editor.action.selectAll",               "when": "editorTextFocus" },
+
+      { "mac": "ctrl+o",           "command": "workbench.action.files.openFile" },
+      { "mac": "ctrl+s",           "command": "workbench.action.files.save" },
+      { "mac": "ctrl+shift+s",     "command": "workbench.action.files.saveAs" },
+
+      { "mac": "ctrl+w",           "command": "workbench.action.closeActiveEditor" },
+      { "mac": "ctrl+b",           "command": "workbench.action.toggleSidebarVisibility" },
+
+      { "mac": "ctrl+d",           "command": "editor.action.addSelectionToNextFindMatch", "when": "editorTextFocus" },
+      { "mac": "ctrl+shift+l",     "command": "editor.action.selectHighlights",            "when": "editorTextFocus" },
+      { "mac": "ctrl+n",           "command": "workbench.action.files.newUntitledFile" },
+      { "mac": "ctrl+alt+up",           "command": "editor.action.insertCursorAbove",       "when": "editorTextFocus" },
+      { "mac": "ctrl+alt+down",         "command": "editor.action.insertCursorBelow",       "when": "editorTextFocus" },
+
+      { "mac": "ctrl+shift+alt+up",     "command": "cursorColumnSelectUp",                 "when": "editorTextFocus" },
+      { "mac": "ctrl+shift+alt+down",   "command": "cursorColumnSelectDown",               "when": "editorTextFocus" },
+      { "mac": "ctrl+shift+alt+left",   "command": "cursorColumnSelectLeft",               "when": "editorTextFocus" },
+      { "mac": "ctrl+shift+alt+right",  "command": "cursorColumnSelectRight",              "when": "editorTextFocus" },
+
+      { "mac": "ctrl+shift+e",     "command": "workbench.view.explorer" },
+      { "mac": "ctrl+shift+g",     "command": "workbench.view.scm" },
+      { "mac": "ctrl+shift+x",     "command": "workbench.view.extensions" },
+      { "mac": "ctrl+shift+d",     "command": "workbench.view.debug" },
+      { "mac": "ctrl+shift+n",     "command": "workbench.action.newWindow" },
+      { "mac": "ctrl+shift+t",     "command": "workbench.action.reopenClosedEditor" }
+    ]
+  }
+}
