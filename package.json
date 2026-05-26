@@ -61,7 +61,9 @@
       { "mac": "ctrl+shift+x",     "command": "workbench.view.extensions" },
       { "mac": "ctrl+shift+d",     "command": "workbench.view.debug" },
       { "mac": "ctrl+shift+n",     "command": "workbench.action.newWindow" },
-      { "mac": "ctrl+shift+t",     "command": "workbench.action.reopenClosedEditor" }
+      { "mac": "ctrl+shift+t",     "command": "workbench.action.reopenClosedEditor" },
+
+      { "mac": "ctrl+.",           "command": "editor.action.quickFix",               "when": "editorTextFocus" }
     ]
   }
 }
