@@ -63,7 +63,9 @@
       { "mac": "ctrl+shift+n",     "command": "workbench.action.newWindow" },
       { "mac": "ctrl+shift+t",     "command": "workbench.action.reopenClosedEditor" },
 
-      { "mac": "ctrl+.",           "command": "editor.action.quickFix",               "when": "editorTextFocus" }
+      { "mac": "ctrl+.",           "command": "editor.action.quickFix",               "when": "editorTextFocus" },
+
+      { "mac": "ctrl+/",           "command": "editor.action.commentLine",            "when": "editorTextFocus" }
     ]
   }
 }
